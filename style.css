@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Galindo&family=Gidole&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: hsla(120, 6%, 90%, 1);
+
+    background: linear-gradient(90deg, hsla(120, 6%, 90%, 1) 0%, hsla(228, 75%, 16%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(120, 6%, 90%, 1) 0%, hsla(228, 75%, 16%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(120, 6%, 90%, 1) 0%, hsla(228, 75%, 16%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E4E7E4", endColorstr="#0A1647", GradientType=1);
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    /* height: 70%; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    background: hsla(186, 33%, 94%, 1);
+
+    background: linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+    background: -moz-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+    background: -webkit-linear-gradient(90deg, hsla(186, 33%, 94%, 1) 0%, hsla(216, 41%, 79%, 1) 100%);
+
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#EBF4F5", endColorstr="#B5C6E0", GradientType=1);
+    gap: 1rem;
+    border-radius: .6rem;
+}
+
+.game>h2 {
+    font-size: 2.6rem;
+}
+
+.icon {
+    height: 5rem;
+    width: 4rem;
+    transition: filter 0.3s;
+}
+
+.icon:hover {
+    filter: brightness(80%);
+}
+
+.icon-main {
+    height: 6rem;
+    width: 5rem;
+    transition: filter 0.3s;
+}
+
+@media (max-width:960px) {
+    .game>h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:700px) {
+    .game {
+        width: 70%;
+    }
+
+    .game>h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:550px) {
+    .game {
+        width: 85%;
+    }
+
+    .icon-main {
+        height: 5rem;
+        width: 4rem;
+    }
+
+    .icon {
+        height: 4rem;
+        width: 3rem;
+    }
+
+    .game>h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* 🔥playing card styles */
+.playing-card {
+    display: flex;
+    gap: 4rem;
+}
+
+.hand1 {
+    transform: rotate(90deg);
+    /* Initial fixed rotation */
+    transition: transform 0.3s;
+}
+
+.shake1 {
+    animation: arcShake 1s ease;
+
+}
+
+@keyframes arcShake {
+    0% {
+        transform: rotate(90deg) translateX(0);
+    }
+
+    20% {
+        transform: rotate(88deg) translateX(-8px);
+    }
+
+    40% {
+        transform: rotate(92deg) translateX(8px);
+    }
+
+    60% {
+        transform: rotate(89deg) translateX(-6px);
+    }
+
+    80% {
+        transform: rotate(91deg) translateX(6px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateX(0);
+    }
+}
+
+
+.hand2 {
+    transform: rotate(275deg);
+    transition: transform 0.3s;
+}
+
+.shake2 {
+    animation: shakeAlong275 1s ease;
+}
+
+@keyframes shakeAlong275 {
+    0% {
+        transform: rotate(275deg) translateX(0);
+    }
+
+    20% {
+        transform: rotate(273deg) translateX(-8px);
+    }
+
+    40% {
+        transform: rotate(277deg) translateX(8px);
+    }
+
+    60% {
+        transform: rotate(274deg) translateX(-6px);
+    }
+
+    80% {
+        transform: rotate(276deg) translateX(6px);
+    }
+
+    100% {
+        transform: rotate(275deg) translateX(0);
+    }
+}
+
+/* 🔥score card styles */
+
+.score-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.scores {
+    display: flex;
+    gap: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* 🔥choice card styles */
+
+.choice-card {
+    display: flex;
+    gap: 1.7rem;
+    margin-top: 1rem;
+}
+
+.rock,
+.paper,
+.scissor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+}
