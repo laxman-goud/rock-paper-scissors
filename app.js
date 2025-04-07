@@ -8,6 +8,7 @@ const botScore = document.getElementById("bot-score");
 
 const playerHand = document.getElementById("player-hand");
 const botHand = document.getElementById("bot-hand");
+const selectChoice = document.querySelector('.choiceH');
 
 let playerPoints = 0;
 let botPoints = 0;
@@ -19,6 +20,7 @@ const play = (choice) => {
     // Reset hands to rock image and start animation
     playerHand.src = 'images/rock.png';
     botHand.src = 'images/rock.png';
+    selectChoice.classList.add('hide');
     playerHand.classList.add("shake1");
     botHand.classList.add("shake2");
 
@@ -47,7 +49,8 @@ const play = (choice) => {
         winnerEL.textContent = `Bot chose ${botChoice}. ${result}`;
         playerScore.textContent = playerPoints;
         botScore.textContent = botPoints;
-
+        
+        selectChoice.classList.remove('hide');
         playerHand.classList.remove("shake1");
         botHand.classList.remove("shake2");
     }, 1000);

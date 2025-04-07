@@ -217,3 +217,7 @@ main {
     align-items: center;
     gap: .4rem;
 }
+
+.hide{
+    display: none;
+}
