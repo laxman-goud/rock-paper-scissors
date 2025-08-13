@@ -49,6 +49,7 @@ main {
     height: 5rem;
     width: 4rem;
     transition: filter 0.3s;
+    cursor: pointer;
 }
 
 .icon:hover {
