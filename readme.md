@@ -42,4 +42,10 @@ GitHub: [@laxman-goud](https://github.com/laxman-goud)
 
 ---
 
-Feel free to fork this project, raise issues, or suggest improvements!
+## 🤝 Contributing
+
+Contributions are welcome! 🎉  
+
+Feel free to **fork this project**, open an **issue**, or submit a **pull request** with your improvements.  
+Please make sure your changes are clear, concise, and follow the contributing guidelines.  
+
